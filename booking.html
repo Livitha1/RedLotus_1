@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Booking Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Booking Form</h2>
+
+  <form action="process_booking.php" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+  
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+  
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" name="date" required><br><br>
+  
+    <label for="time">Time:</label><br>
+    <input type="time" id="time" name="time" required><br><br>
+  
+    <label for="party-size">Party Size:</label><br>
+    <input type="number" id="party-size" name="party_size" min="1" required><br><br>
+  
+    <label for="special-requests">Special Requests:</label><br>
+    <textarea id="special-requests" name="special_requests" rows="4" cols="50"></textarea><br><br>
+  
+    <input type="submit" value="Book Now">
+  </form>
+</div>
+
+</body>
+</html>
